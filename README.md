@@ -4,10 +4,10 @@
 
 ## Integrantes del equipo
 
-[Inés, Meléndez del Pozo, InesMelendez.
- Álvaro Requena Porcuna
- Alejandro Salamanca Delgado
- Jacobo Ruiz Benito]
+[Inés, Meléndez del Pozo, InesMelendez]
+[Álvaro Requena Porcuna,]
+[Alejandro Salamanca Delgado,]
+[Jacobo Ruiz Benito,]
 
 ## Objetivos del trabajo
 
