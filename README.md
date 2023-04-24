@@ -4,9 +4,9 @@
 
 ## Integrantes del equipo
 
-[Inés Meléndez del Pozo,(InesMelendez)](https://github.com/InesMelendez)]
+Ines Melendez del Pozo [(InesMelendez)](https://github.com/InesMelendez)
 
-[Álvaro Requena Porcuna,(alvaroorequena)](https://github.com/alvaroorequenaa)]
+Alvaro Requena Porcuna [(alvaroorequena)](https://github.com/alvaroorequenaa)
 
 [Alejandro Salamanca Delgado,]
 
