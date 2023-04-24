@@ -4,7 +4,7 @@
 
 ## Integrantes del equipo
 
-[Inés, Meléndez del Pozo, InesMelendez]
+[Inés Meléndez del Pozo, InesMelendez]
 
 [Álvaro Requena Porcuna, alvaroorequenaa]
 
