@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    FILE* fp;
+    char c;
+
+    fp = fopen("generacion_por_tecnologias_21_22.csv", "r");
+
+    if (fp == NULL) {
+        printf("El archivo no se puede abrir\n");
+        return 1;
+    }
+
+    printf("Contenido del archivo:\n");
+
+    do {
+        c = fgetc(fp);
+
+        if (c != EOF) {
+            printf("%c", c);
+        }
+
+    } while (c != EOF);
+    fclose(fp);
+
+    return 0;
+}
