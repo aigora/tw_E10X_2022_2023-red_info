@@ -1,6 +1,7 @@
 # [Red Eléctrica Española]
 
-[Descripción breve del proyecto a realizar (2-3 frases).]
+Realización de un programa que permita obtener cálculos estadísticos a partir de datos recogidos permitiendo al usuario interactuar mediante un menu de opciones que permite hacer los calculos necesarios.
+
 
 ## Integrantes del equipo
 
