@@ -14,4 +14,4 @@ Jacobo Ruiz Benito,
 
 ## Objetivos del trabajo
 
-[Lista de los objetivos que se persiguen con el trabajo propuesto.]
+El objetivo del trabajo consiste en analizar los datos de generación de energía eléctrica en España proporcionados por Red Eléctrica Española  y visualizar los datos de generación de energía eléctrica de España en una gráfica de barras mensual mediante la aplicacion de funciones que puedan hacer calculos de los datos estadísticos, utilización de ficheros para su lectura y para guardar nuevos datos.
