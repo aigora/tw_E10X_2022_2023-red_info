@@ -3,7 +3,7 @@
 
 int main()
 {
-    int opcion, letra;
+    int opcion, letra, ano, mes, funcion;
 
     do
     {
@@ -13,6 +13,7 @@ int main()
         printf("3. Operacion a realizar\n");
         printf("4. Salir\n");
         scanf("%d", &opcion);
+        system("cls");
 
         switch(opcion)
         {
@@ -37,22 +38,150 @@ int main()
                     printf("16. Residuos no renovables\n");
                     printf("17. Residuos renovables\n");
                     printf("18. Generacion total\n");
-                    printf("19. Volver\n");
+                    printf("19. VOLVER\n");
                     scanf("%d", &letra);
+                    system("cls");
+
+                    switch(letra)
+                    {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    case 8:
+                        break;
+                    case 9:
+                        break;
+                    case 10:
+                        break;
+                    case 11:
+                        break;
+                    case 12:
+                        break;
+                    case 13:
+                        break;
+                    case 14:
+                        break;
+                    case 15:
+                        break;
+                    case 16:
+                        break;
+                    case 17:
+                        break;
+                    case 18:
+                        break;
+                    case 19:
+                        break;
+                    default:
+                        printf("Seleccione una opcion valida:\n");
+                    }
                 } while (letra != 19);
                 break;
-                
+
             case 2:
-                printf("Inserte la fecha.\n");
+                do
+                {
+                    printf("Elija el ano que quiera mirar.\n");
+                    printf("1. 2021\n");
+                    printf("2. 2022\n");
+                    printf("3. VOLVER\n");
+                    scanf("%d", &ano);
+                    system("cls");
+
+                    switch(ano)
+                    {
+                        case 1:
+                        case 2:
+                            printf("Elija el mes que quiera mirar.\n");
+                            printf("1. Enero\n");
+                            printf("2. Febrero\n");
+                            printf("3. Marzo\n");
+                            printf("4. Abril\n");
+                            printf("5. Mayo\n");
+                            printf("6. Junio\n");
+                            printf("7. Julio\n");
+                            printf("8. Agosto\n");
+                            printf("9. Septiembre\n");
+                            printf("10. Octubre\n");
+                            printf("11. Noviembre\n");
+                            printf("12. Diciembre\n");
+                            printf("13. VOLVER\n");
+                            scanf("%d",&mes);
+                            system("cls");
+
+                            switch (mes)
+                            {
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                            case 3:
+                                break;
+                            case 4:
+                                break;
+                            case 5:
+                                break;
+                            case 6:
+                                break;
+                            case 7:
+                                break;
+                            case 8:
+                                break;
+                            case 9:
+                                break;
+                            case 10:
+                                break;
+                            case 11:
+                                break;
+                            case 12:
+                                break;
+                            default:
+                                printf("Seleccione una opcion valida\n");
+                            }
+                    }
+                }while (ano !=3 );
                 break;
-                
+
             case 3:
-                printf("Inserte la operacion a realizar.\n");
+                {
+                    printf("Elija la funcion que quiera realizar.\n");
+                    printf("1. Maxima\n");
+                    printf("2. Minimo\n");
+                    printf("3. Media\n");
+                    printf("4. VOLVER\n");
+                    scanf("%d", &funcion);
+                    system("cls");
+
+                    switch(funcion)
+                    {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    default:
+                    printf("Seleccione una opcion valida\n");
+                    }
+                }while (funcion != 4);
                 break;
-                
+
             case 4:
                 printf("Adios!\n");
                 break;
+
             default:
                 printf("Opcion invalida. Intenta de nuevo.\n");
                 break;
