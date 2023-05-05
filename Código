@@ -1,30 +1,63 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int main()
 {
-    FILE* fp;
-    char c;
+    int opcion, letra;
 
-    fp = fopen("generacion_por_tecnologias_21_22.csv", "r");
+    do
+    {
+        printf("Seleccione la informacion que quiera.\n");
+        printf("1. Tipos de generacion\n");
+        printf("2. Fecha\n");
+        printf("3. Operacion a realizar\n");
+        printf("4. Salir\n");
+        scanf("%d", &opcion);
 
-    if (fp == NULL) {
-        printf("El archivo no se puede abrir\n");
-        return 1;
-    }
-
-    printf("Contenido del archivo:\n");
-
-    do {
-        c = fgetc(fp);
-
-        if (c != EOF) {
-            printf("%c", c);
+        switch(opcion)
+        {
+            case 1:
+                do
+                {
+                    printf("1. Hidraulica\n");
+                    printf("2. Turbina de bombeo\n");
+                    printf("3. Nuclear\n");
+                    printf("4. Carbon\n");
+                    printf("5. Fuel + Gas\n");
+                    printf("6. Motores Diesel\n");
+                    printf("7. Turbina de gas\n");
+                    printf("8. Turbina de vapor\n");
+                    printf("9. Ciclo combinado\n");
+                    printf("10. Hidroeolica\n");
+                    printf("11. Eolica\n");
+                    printf("12. Solar fotovoltaica\n");
+                    printf("13. Solar termica\n");
+                    printf("14. Otras renovables\n");
+                    printf("15. Cogeneracion\n");
+                    printf("16. Residuos no renovables\n");
+                    printf("17. Residuos renovables\n");
+                    printf("18. Generacion total\n");
+                    printf("19. Volver\n");
+                    scanf("%d", &letra);
+                } while (letra != 19);
+                break;
+                
+            case 2:
+                printf("Inserte la fecha.\n");
+                break;
+                
+            case 3:
+                printf("Inserte la operacion a realizar.\n");
+                break;
+                
+            case 4:
+                printf("Adios!\n");
+                break;
+            default:
+                printf("Opcion invalida. Intenta de nuevo.\n");
+                break;
         }
-
-    } while (c != EOF);
-    fclose(fp);
+    } while (opcion != 4);
 
     return 0;
 }
