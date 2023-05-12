@@ -7,11 +7,14 @@
 
 void Menu_Inicial (); //Menu para seleccionar opcion
 void Hora(); //Funcion para mostrar la hora en pantalla
-
+void Red_Info();
 
 int main()
 {
     int opcion, letra, ano, mes, funcion;
+    
+    Red_Info();
+    system("\n\n PAUSE");
 
     do
     {
@@ -220,3 +223,26 @@ void Hora()
 	strftime(fecha_dia, 100, "%d/%m/%Y", tm);
 	printf("\n Fecha actual: %s", fecha_dia);
 }
+
+
+void Red_Info()
+{
+	int c;
+	
+	FILE *Red_Electr;
+	Red_Electr = fopen("Red_Electr.txt", "r"); 
+
+	if (Red_Electr == NULL)
+	  printf("\n Archivo no encontrado.");
+
+   	 while((c = getc(Red_Electr)) != EOF)
+	{
+	 	if (c == '\n')
+	 	   printf("\n");
+	 	else if (c == '\0')
+	 	   printf("\0");
+	 	else
+	 	   putchar(c);
+	}
+}
+
