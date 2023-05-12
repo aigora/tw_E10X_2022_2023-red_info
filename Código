@@ -7,12 +7,12 @@ int main()
 
     do
     {
-        printf("Seleccione la informacion que quiera.\n");
-        printf("1. Tipos de generacion\n");
-        printf("2. Fecha\n");
-        printf("3. Operacion a realizar\n");
-        printf("4. Salir\n");
-        scanf("%d", &opcion);
+        printf("Seleccione la informacion que desea consultar.\n");
+        printf("1. Tipos de generacion.\n");
+        printf("2. Fecha.\n");
+        printf("3. Operacion a realizar.\n");
+        printf("4. Salir.\n");
+        scanf("%d", &opcion.);
         system("cls");
 
         switch(opcion)
@@ -179,11 +179,11 @@ int main()
                 break;
 
             case 4:
-                printf("Adios!\n");
+                printf("Fin del programa...\n");
                 break;
 
             default:
-                printf("Opcion invalida. Intenta de nuevo.\n");
+                printf("Opcion erronea. Seleccione una opcion valida.\n");
                 break;
         }
     } while (opcion != 4);
