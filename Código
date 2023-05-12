@@ -1,5 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
+
+void Menu_Inicial (); //Menu para seleccionar opcion
+void Hora(); //Funcion para mostrar la hora en pantalla
+
 
 int main()
 {
@@ -7,12 +15,8 @@ int main()
 
     do
     {
-        printf("Seleccione la informacion que desea consultar.\n");
-        printf("1. Tipos de generacion.\n");
-        printf("2. Fecha.\n");
-        printf("3. Operacion a realizar.\n");
-        printf("4. Salir.\n");
-        scanf("%d", &opcion.);
+        Menu_Inicial();  //Muestra en pantalla el menu a seleccionar
+        scanf("%d", &opcion);
         system("cls");
 
         switch(opcion)
@@ -20,25 +24,25 @@ int main()
             case 1:
                 do
                 {
-                    printf("1. Hidraulica\n");
-                    printf("2. Turbina de bombeo\n");
-                    printf("3. Nuclear\n");
-                    printf("4. Carbon\n");
-                    printf("5. Fuel + Gas\n");
-                    printf("6. Motores Diesel\n");
-                    printf("7. Turbina de gas\n");
-                    printf("8. Turbina de vapor\n");
-                    printf("9. Ciclo combinado\n");
-                    printf("10. Hidroeolica\n");
-                    printf("11. Eolica\n");
-                    printf("12. Solar fotovoltaica\n");
-                    printf("13. Solar termica\n");
-                    printf("14. Otras renovables\n");
-                    printf("15. Cogeneracion\n");
-                    printf("16. Residuos no renovables\n");
-                    printf("17. Residuos renovables\n");
-                    printf("18. Generacion total\n");
-                    printf("19. VOLVER\n");
+                    printf("  1)  Hidraulica\n");
+                    printf("  2)  Turbina de bombeo\n");
+                    printf("  3)  Nuclear\n");
+                    printf("  4)  Carbon\n");
+                    printf("  5)  Fuel + Gas\n");
+                    printf("  6)  Motores Diesel\n");
+                    printf("  7)  Turbina de gas\n");
+                    printf("  8)  Turbina de vapor\n");
+                    printf("  9)  Ciclo combinado\n");
+                    printf("  10) Hidroeolica\n");
+                    printf("  11) Eolica\n");
+                    printf("  12) Solar fotovoltaica\n");
+                    printf("  13) Solar termica\n");
+                    printf("  14) Otras renovables\n");
+                    printf("  15) Cogeneracion\n");
+                    printf("  16) Residuos no renovables\n");
+                    printf("  17) Residuos renovables\n");
+                    printf("  18) Generacion total\n");
+                    printf("  19) VOLVER\n");
                     scanf("%d", &letra);
                     system("cls");
 
@@ -83,7 +87,7 @@ int main()
                     case 19:
                         break;
                     default:
-                        printf("Seleccione una opcion valida:\n");
+                        printf("Seleccione una opcion valida:\n\n");
                     }
                 } while (letra != 19);
                 break;
@@ -92,9 +96,9 @@ int main()
                 do
                 {
                     printf("Elija el ano que quiera mirar.\n");
-                    printf("1. 2021\n");
-                    printf("2. 2022\n");
-                    printf("3. VOLVER\n");
+                    printf("  1)  2021\n");
+                    printf("  2)  2022\n");
+                    printf("  3)  VOLVER\n");
                     scanf("%d", &ano);
                     system("cls");
 
@@ -103,19 +107,19 @@ int main()
                         case 1:
                         case 2:
                             printf("Elija el mes que quiera mirar.\n");
-                            printf("1. Enero\n");
-                            printf("2. Febrero\n");
-                            printf("3. Marzo\n");
-                            printf("4. Abril\n");
-                            printf("5. Mayo\n");
-                            printf("6. Junio\n");
-                            printf("7. Julio\n");
-                            printf("8. Agosto\n");
-                            printf("9. Septiembre\n");
-                            printf("10. Octubre\n");
-                            printf("11. Noviembre\n");
-                            printf("12. Diciembre\n");
-                            printf("13. VOLVER\n");
+                            printf("  1)  Enero\n");
+                            printf("  2)  Febrero\n");
+                            printf("  3)  Marzo\n");
+                            printf("  4)  Abril\n");
+                            printf("  5)  Mayo\n");
+                            printf("  6)  Junio\n");
+                            printf("  7)  Julio\n");
+                            printf("  8)  Agosto\n");
+                            printf("  9)  Septiembre\n");
+                            printf("  10) Octubre\n");
+                            printf("  11) Noviembre\n");
+                            printf("  12) Diciembre\n");
+                            printf("  13) VOLVER\n");
                             scanf("%d",&mes);
                             system("cls");
 
@@ -154,11 +158,11 @@ int main()
 
             case 3:
                 {
-                    printf("Elija la funcion que quiera realizar.\n");
-                    printf("1. Maxima\n");
-                    printf("2. Minimo\n");
-                    printf("3. Media\n");
-                    printf("4. VOLVER\n");
+                    printf("Elija la funcion que quiera realizar.\n\n",162);
+                    printf("  1) Maxima\n");
+                    printf("  2) Minimo\n");
+                    printf("  3) Media\n");
+                    printf("  4) VOLVER\n");
                     scanf("%d", &funcion);
                     system("cls");
 
@@ -189,4 +193,30 @@ int main()
     } while (opcion != 4);
 
     return 0;
+}
+
+
+
+void Menu_Inicial ()  
+{
+	system ("cls");
+	Hora();
+    printf ("\n\n Bienvenido a la Red de c%clculos el%cctricos de Espa%ca. Seleccione la opci%cn que desea consultar:\n ",160,130,164,162) ;
+    printf ("\n  1) Tipos de generacion.\n");
+    printf ("\n  2) Fecha.\n");
+    printf ("\n  3) Operacion a realizar.\n");
+    printf ("\n  4) Salir.\n");
+    printf ("\n\n Elija una opci%cn: ",162);  
+}
+
+
+void Hora()
+{
+	time_t t;
+	struct tm *tm;
+	char fecha_dia[100];
+	t = time(NULL);
+	tm = localtime(&t);
+	strftime(fecha_dia, 100, "%d/%m/%Y", tm);
+	printf("\n Fecha actual: %s", fecha_dia);
 }
