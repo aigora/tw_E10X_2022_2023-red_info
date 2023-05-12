@@ -230,7 +230,7 @@ void Red_Info()
 	int c;
 	
 	FILE *Red_Electr;
-	Red_Electr = fopen("Red_Electr.txt", "r"); 
+	Red_Electr = fopen("Red_Info.txt", "r"); 
 
 	if (Red_Electr == NULL)
 	  printf("\n Archivo no encontrado.");
