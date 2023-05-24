@@ -9,9 +9,9 @@ Ines Melendez del Pozo [(InesMelendez)](https://github.com/InesMelendez)
 
 Alvaro Requena Porcuna [(alvaroorequena)](https://github.com/alvaroorequenaa)
 
-Alejandro Salamanca Delgado,
+Alejandro Salamanca Delgado [(Alejandro-Salamanca20)](https://github.com/Alejandro-Salamanca20)
 
-Jacobo Ruiz Benito,
+Jacobo Ruiz Benito [(jacoboruizbenito)](https://github.com/jacoboruizbenito)
 
 ## Objetivos del trabajo
 
