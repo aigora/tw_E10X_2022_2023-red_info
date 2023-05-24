@@ -11,3 +11,4 @@ void calculos3();
 void informacion();
 void VolverAlMenu();
 void Hora();
+void Red_Info();
