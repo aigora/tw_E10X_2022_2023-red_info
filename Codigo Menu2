@@ -1,0 +1,431 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "funciones.h"
+#include <time.h>
+#include <string.h>
+
+void MenuPrincipal()
+{
+    int tecla;
+//Funcion que imprime por pantalla el dia de la semana, el dia, el mes, el año y la hora de hoy
+    Hora();
+//Funcion del menu principal, con un do while para elegir una opcion de estas 4.
+    printf("\n");
+    printf("Bienvenido a la red de calculos electricos de Espana, seleccione la opcion que desea consultar:\n");
+    printf("\n");
+    printf("1. Energias renovables\n");
+    printf("\n");
+    printf("2. Energias NO renovables\n");
+    printf("\n");
+    printf("3. Energia Total\n");
+    printf("\n");
+    printf("4. Informacion breve y descripcion de las energias\n");
+    printf("\n");
+
+    do
+    {
+        printf("Elija una opcion valida\n");
+        scanf("%i", &tecla);
+    }
+    while(tecla != 1 && tecla != 2 && tecla != 3 && tecla != 4);
+
+    switch(tecla)
+    {
+        case 1:
+//Funcion energias no renovables
+            system("cls");
+        EnergiasRenovables();
+        break;
+
+        case 2:
+//Funcion para las energias no renovables
+            system("cls");
+        EnergiasNoRenovables();
+        break;
+
+        case 3:
+//Funcion para la energia total
+            system("cls");
+        EnergiaTotal();
+        break;
+
+        case 4:
+//Funcion de informacion que te lleva a una breve descripcion de todas las energias
+            system("cls");
+        informacion();
+        break;
+    }
+
+}
+EnergiasRenovables()
+{
+    int renovables;
+//Funcion para consultar las diversas energias renovables del trabajo
+    printf("1. Energia hidraulica\n");
+    printf("\n");
+    printf("2. Hidroeolica\n");
+    printf("\n");
+    printf("3. Eolica\n");
+    printf("\n");
+    printf("4. Solar fotoboltaica\n");
+    printf("\n");
+    printf("5. Solar termica\n");
+    printf("\n");
+    printf("6. Residuos renovables\n");
+    printf("\n");
+    printf("7. Otras energias renovables\n");
+    printf("\n");
+    printf("0. Volver al menu principal\n");
+    printf("\n");
+    do
+    {
+        printf("Elija una opcion valida\n");
+        scanf("%i", &renovables);
+    }
+    while(renovables < 0 || renovables > 7);
+    switch(renovables)
+    {
+        case 1:
+            system("cls");
+            printf("\n");
+        printf("Energia hidraulica, que desea consultar\n");
+        analisis1();
+        break;
+
+        case 2:
+            system("cls");
+            printf("\n");
+        printf("Energia hidroeolica, que desea consultar\n");
+        analisis1();
+        break;
+
+        case 3:
+            system("cls");
+            printf("\n");
+        printf("Energia eolica, que desea consultar\n");
+        analisis1();
+        break;
+
+        case 4:
+            system("cls");
+            printf("\n");
+        printf("Energia solar fotovoltaica, que desea consultar\n");
+        analisis1();
+        break;
+
+        case 5:
+            system("cls");
+            printf("\n");
+        printf("Energia solar termica, que desea consultar\n");
+        analisis1();
+        break;
+
+        case 6:
+            system("cls");
+            printf("\n");
+        printf("Residuos renovables, que desea consultar\n");
+        analisis1();
+        break;
+
+        case 7:
+            system("cls");
+            printf("\n");
+        printf("Otras energias renovables, que desea consultar\n");
+        analisis1();
+        break;
+
+        case 0:
+            system("cls");
+        MenuPrincipal();
+    }
+}
+void EnergiasNoRenovables()
+{
+//Funcion para consultar las diversas energias no renovables del trabajo
+    int norenovables;
+    printf("1. Turbinacion de bombeo\n");
+    printf("\n");
+    printf("2. Nuclear\n");
+    printf("\n");
+    printf("3. Carbon\n");
+    printf("\n");
+    printf("4. Fuel mas gas\n");
+    printf("\n");
+    printf("5. Motores diesel\n");
+    printf("\n");
+    printf("6. Turbina de gas\n");
+    printf("\n");
+    printf("7. Turbina de vapor\n");
+    printf("\n");
+    printf("8. Ciclo combinado\n");
+    printf("\n");
+    printf("9. Cogeneracion\n");
+    printf("\n");
+    printf("10. Residuos no renovables\n");
+    printf("\n");
+    printf("0. Volver al menu principal\n");
+    printf("\n");
+    do
+    {
+        printf("Elija una opcion valida\n");
+        scanf("%i",&norenovables);
+    }
+    while(norenovables < 0 || norenovables > 10);
+    switch(norenovables)
+    {
+        case 1:
+            system("cls");
+            printf("\n");
+        printf("Turbina de bombeo, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 2:
+            system("cls");
+            printf("\n");
+        printf("Energia nuclear, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 3:
+            system("cls");
+            printf("\n");
+        printf("Carbon, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 4:
+            system("cls");
+            printf("\n");
+        printf("Fuel mas gas, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 5:
+            system("cls");
+            printf("\n");
+        printf("Motor diesel, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 6:
+            system("cls");
+            printf("\n");
+        printf("Turbina de gas, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 7:
+            system("cls");
+            printf("\n");
+        printf("Turbina de vapor, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 8:
+            system("cls");
+            printf("\n");
+        printf("Ciclo combinado, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 9:
+            system("cls");
+            printf("\n");
+        printf("Cogeneracion, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 10:
+            system("cls");
+            printf("\n");
+        printf("Residuos no renovables, que desea consultar\n");
+        analisis2();
+        break;
+
+        case 0:
+            system("cls");
+        MenuPrincipal();
+}
+}
+//Energia total
+void EnergiaTotal()
+{
+//Funcion para consultar el apartado de energia total
+    printf("1. Consultar una fecha\n");
+    printf("\n");
+    printf("2. Consultar todas las fechas\n");
+    printf("\n");
+    printf("3. Calculos\n");
+    printf("\n");
+    printf("0. Volver al menu principal\n");
+    printf("\n");
+
+    analisis3();
+}
+//Renovables
+void analisis1()
+{
+//Funcion de consultas para las energias renovables
+    int consulta, ano, mes;
+        printf("\n");
+        printf("1. Consultar informacion de una fecha\n");
+        printf("\n");
+        printf("2. Consultar informacion de todas las fechas\n");
+        printf("\n");
+        printf("3. Calculos\n");
+        printf("\n");
+        printf("4. Volver al menu de energias renovables\n");
+        printf("\n");
+        printf("0. Volver al menu principal\n");
+        printf("\n");
+    do
+    {
+        printf("Elija una opcion valida\n");
+        scanf("%i", &consulta);
+    }
+    while(consulta < 0 || consulta > 4);
+    switch(consulta)
+    {
+        case 1:
+            system("cls");
+        printf("Que fecha quiere consultar, seleccionando primero el ano y seguidamente el mes\n");
+        printf("\n");
+        do
+        {
+            printf("Seleccione un ano 2021 o 2022\n");
+            scanf("%i", &ano);
+        }
+        while(ano != 2021 && ano != 2022);
+        do
+        {
+            printf("Seleccione un mes valido\n");
+            scanf("%i", &mes);
+        }
+        while(mes < 1 || mes > 12);
+        printf("\n");
+            system("cls");
+        printf("La fecha seleccionada es: %i / %i \n", mes, ano);
+        break;
+
+        case 2:
+            system("cls");
+        printf("Imprimir todas la fechas\n");
+        break;
+
+        case 3:
+            system("cls");
+        printf("Que calculos desea realizar\n");
+        printf("\n");
+        calculos1();
+        break;
+
+        case 4:
+                system("cls");
+            EnergiasRenovables();
+        break;
+
+        case 0:
+                system("cls");
+            MenuPrincipal();
+        break;
+
+    }
+}
+//No renovables
+void analisis2()
+{
+//Funcion de consultas para las energias no renovables
+    int consulta, ano, mes;
+        printf("\n");
+        printf("1. Consultar informacion de una fecha\n");
+        printf("\n");
+        printf("2. Consultar informacion de todas las fechas\n");
+        printf("\n");
+        printf("3. Calculos\n");
+        printf("\n");
+        printf("4. Volver al menu de energias no renovables\n");
+        printf("\n");
+        printf("0. Volver al menu principal\n");
+        printf("\n");
+    do
+    {
+        printf("Elija una opcion valida\n");
+        scanf("%i", &consulta);
+    }
+    while(consulta < 0 || consulta > 4);
+    switch(consulta)
+    {
+        case 1:
+            system("cls");
+        printf("Que fecha quiere consultar, seleccionando primero el ano y seguidamente el mes\n");
+        printf("\n");
+        do
+        {
+            printf("Seleccione un ano valido\n");
+            scanf("%i", &ano);
+        }
+        while(ano < 2021 || ano > 2022);
+        do
+        {
+            printf("Seleccione un mes valido\n");
+            scanf("%i", &mes);
+        }
+        while(mes < 1 || mes > 12);
+        printf("\n");
+            system("cls");
+        printf("La fecha seleccionada es: %i / %i \n", mes, ano);
+        break;
+
+        case 2:
+            system("cls");
+        printf("Imprimir todas la fechas\n");
+        break;
+
+        case 3:
+            system("cls");
+        printf("Que calculos desea realizar\n");
+        printf("\n");
+        calculos2();
+        break;
+
+        case 4:
+                system("cls");
+            EnergiasNoRenovables();
+        break;
+
+        case 0:
+                system("cls");
+            MenuPrincipal();
+        break;
+    }
+}
+//Energia total
+void analisis3()
+{
+//Funcion de consultas para la energia total
+    int consulta, ano, mes;
+    do
+    {
+        printf("Elija una opcion valida\n");
+        scanf("%i", &consulta);
+    }
+    while(consulta != 1 && consulta != 2 && consulta != 3 && consulta !=0);
+    switch(consulta)
+    {
+        case 1:
+            system("cls");
+        printf("Que fecha quiere consultar, seleccionando primero el ano y seguidamente el mes\n");
+        printf("\n");
+        do
+        {
+            printf("Seleccione un ano valido\n");
+            scanf("%i", &ano);
+        }
+        while(ano < 2021 && ano > 2022);
+        do
+        {
+            printf("Seleccione un mes valido\n");
+            scanf("%i", &mes);
+        }
+        while(mes < 1 || mes > 12);
