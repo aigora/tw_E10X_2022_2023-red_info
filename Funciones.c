@@ -602,7 +602,7 @@ void calculos3()
     do
     {
         printf("Seleccione una opcion valida\n");
-        scanf("%c", &operaciones);
+        scanf("%i", &operaciones);
     }
     while(operaciones != 1 && operaciones != 2 && operaciones != 3 && operaciones != 4 && operaciones != 5 && operaciones != 6 && operaciones != 0);
     switch(operaciones)
@@ -634,7 +634,7 @@ void calculos3()
 
         case 6:
                 system("cls");
-            analisis3();
+            EnergiaTotal();
         break;
 
         case 0:
