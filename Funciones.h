@@ -1,0 +1,13 @@
+void MenuPrincipal();
+void EnergiasRenovables();
+void EnergiasNoRenovables();
+void EnergiaTotal();
+void analisis1();
+void analisis2();
+void analisis3();
+void calculos1();
+void calculos2();
+void calculos3();
+void informacion();
+void VolverAlMenu();
+void Hora();
