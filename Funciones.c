@@ -148,23 +148,21 @@ void EnergiasNoRenovables()
     printf("2. Nuclear\n");
     printf("\n");
     printf("3. Carbon\n");
+    printf("4. Motores diesel\n");
     printf("\n");
-    printf("4. Fuel mas gas\n");
+    printf("5. Turbina de gas\n");
     printf("\n");
-    printf("5. Motores diesel\n");
+    printf("6. Turbina de vapor\n");
     printf("\n");
-    printf("6. Turbina de gas\n");
+    printf("7. Ciclo combinado\n");
     printf("\n");
-    printf("7. Turbina de vapor\n");
+    printf("8. Cogeneracion\n");
     printf("\n");
-    printf("8. Ciclo combinado\n");
-    printf("\n");
-    printf("9. Cogeneracion\n");
-    printf("\n");
-    printf("10. Residuos no renovables\n");
+    printf("9. Residuos no renovables\n");
     printf("\n");
     printf("0. Volver al menu principal\n");
     printf("\n");
+	
     do
     {
         printf("Elija una opcion valida\n");
@@ -197,46 +195,39 @@ void EnergiasNoRenovables()
         case 4:
             system("cls");
             printf("\n");
-        printf("Fuel mas gas, que desea consultar\n");
+        printf("Motor diesel, que desea consultar\n");
         analisis2();
         break;
 
         case 5:
             system("cls");
             printf("\n");
-        printf("Motor diesel, que desea consultar\n");
+        printf("Turbina de gas, que desea consultar\n");
         analisis2();
         break;
 
         case 6:
             system("cls");
             printf("\n");
-        printf("Turbina de gas, que desea consultar\n");
+        printf("Turbina de vapor, que desea consultar\n");
         analisis2();
         break;
 
         case 7:
             system("cls");
             printf("\n");
-        printf("Turbina de vapor, que desea consultar\n");
+        printf("Ciclo combinado, que desea consultar\n");
         analisis2();
         break;
 
         case 8:
             system("cls");
             printf("\n");
-        printf("Ciclo combinado, que desea consultar\n");
-        analisis2();
-        break;
-
-        case 9:
-            system("cls");
-            printf("\n");
         printf("Cogeneracion, que desea consultar\n");
         analisis2();
         break;
 
-        case 10:
+        case 9:
             system("cls");
             printf("\n");
         printf("Residuos no renovables, que desea consultar\n");
