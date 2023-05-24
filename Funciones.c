@@ -857,6 +857,7 @@ void Hora()
     strcpy(fechaYhora, ctime(&tiempoActual));
     printf("%s ", fechaYhora);
 }
+
 //Funcion de añadir el texto de bienvenida
 void Red_Info()
 {
@@ -877,5 +878,82 @@ void Red_Info()
 	 	else
 	 	   putchar(c);
 	}
+}
+
+//Funcion para la lectura del fichero de generacion_por_tecnologias_21_22
+void Lee_Fichero(ENERGIA dato[], CADENAS cadenas[], FECHAS fechas[])
+{
+    int i, j;
+    FILE* pf = fopen("generacion_por_tecnologias_21_22.txt", "r");
+   
+    if (pf==NULL)
+    {
+       printf("No se pudo abrir el archivo.\n");
+       return ;
+    }
+
+    else
+    {
+
+	for (i=0; i<4; i++)
+	{
+	     fgets(cadenas[i].cad, 250, pf);
+        }
+	     fscanf(pf, "%s", cadenas[4].cad);
+
+	for (i=0; i<24; i++)
+	{
+	    fscanf(pf, "%s", fechas[i].anno);
+        }
+
+        // Leer el archivo línea por línea
+	 for (i=0; i<17; i++)
+         {
+	    // Leer la cadena de caracteres
+	     fscanf(pf, "%s", dato[i].energia);
+
+	    // Leer los valores float
+	     for (j=0; j<24; j++)
+	     {
+	         fscanf(pf, "%f", &dato[i].magnitud[j]);
+	     }
+	  }
+
+         fclose(pf);
+    }
+}
+
+//Funcion para mostrar por pantala el fichero de generacion_por_tecnologias_21_22
+void Escribe_Fichero(ENERGIA dato[], CADENAS cadenas[], FECHAS fechas[])
+{
+    int i, j;
+
+    for (i=0; i<5; i++)
+    {
+        printf("%s", cadenas[i].cad);
+    }
+
+     printf("\n\n");
+
+     for (i=0; i<24; i++)
+     { 
+        printf("%s\t", fechas[i].anno);
+     }
+
+     printf("\n\n");
+
+    // Imprime el archivo línea por línea
+    for (i=0; i<17; i++)
+    {
+        printf("%25s ", dato[i].energia);
+
+	  // Imprime los valores float
+	     for (j=0; j<24; j++)
+             {
+                printf("%7.1f ", dato[i].magnitud[j]);
+             }
+             printf("\n");
+    }
+
 }
 
