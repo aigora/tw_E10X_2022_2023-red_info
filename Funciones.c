@@ -857,3 +857,25 @@ void Hora()
     strcpy(fechaYhora, ctime(&tiempoActual));
     printf("%s ", fechaYhora);
 }
+//Funcion de añadir el texto de bienvenida
+void Red_Info()
+{
+	int c;
+
+	FILE *Red_Electr;
+	Red_Electr = fopen("Red_Info.txt", "r");
+
+	if (Red_Electr == NULL)
+	  printf("\n Archivo no encontrado.");
+
+   	 while((c = getc(Red_Electr)) != EOF)
+	{
+	 	if (c == '\n')
+	 	   printf("\n");
+	 	else if (c == '\0')
+	 	   printf("\0");
+	 	else
+	 	   putchar(c);
+	}
+}
+
