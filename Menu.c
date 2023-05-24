@@ -5,6 +5,7 @@
 #include <string.h>
 int main()
 {
+    Red_Info();
     MenuPrincipal();
 
     return 0;
