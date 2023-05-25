@@ -456,11 +456,15 @@ void analisis3()
         break;
     }
 }
+
+
 //Renovables
+//Funcion de calculos para las energias renovables
 void calculos1()
 {
-//Funcion de calculos para las energias renovables
     int operaciones;
+    float max2, min2;
+
     printf("1. Maximo\n");
     printf("\n");
     printf("2. Minimo\n");
@@ -485,7 +489,7 @@ void calculos1()
     {
         case 1:
             system("cls");
-
+            max1=calcularMaximo(dato);
         break;
 
         case 2:
@@ -521,11 +525,15 @@ void calculos1()
     }
 
 }
+
+
 //No renovables
+//Funcion de calculos para las energias no renovables
 void calculos2()
 {
-//Funcion de calculos para las energias no renovables
     int operaciones;
+    float max2, min2;
+
     printf("1. Maximo\n");
     printf("\n");
     printf("2. Minimo\n");
@@ -550,7 +558,7 @@ void calculos2()
     {
         case 1:
             system("cls");
-
+            max2=calcularMaximo(dato);
         break;
 
         case 2:
@@ -586,11 +594,15 @@ void calculos2()
     }
 
 }
-//Energia totsl
+
+
+//Energia total
+//Funcion de calculos para la energia total
 void calculos3()
 {
-//Funcion de calculos para la energia total
     int operaciones;
+    float max3, min3;
+
     printf("1. Maximo\n");
     printf("\n");
     printf("2. Minimo\n");
@@ -615,7 +627,7 @@ void calculos3()
     {
         case 1:
             system("cls");
-
+            max3=calcularMaximo(dato);
         break;
 
         case 2:
@@ -1031,3 +1043,44 @@ void E_Total()
 }
 
 
+//Función Calculo del maximo valor que una energia ha producido.
+float calcularMaximo(ENERGIA dato[])
+{
+    float maximo;  // Inicializar con el primer número del vector
+    int i,j;
+    char nombre[60];
+    int nombreValido=0;
+
+    do
+    {
+	    printf("Dame el nombre de la energia a calcular el Maximo\n");
+	    scanf("%s", nombre);
+	    printf("\n");
+
+	    for (j=0; j<17; j++)
+	    {
+	        if(strcmp(dato[j].energia, nombre)==0)
+	        {
+		        nombreValido = 1;
+			    maximo = dato[j].magnitud[0]; // Inicializar con el primer número del vector
+
+	            for (i=1; i<24; i++)
+				{
+			        if (dato[j].magnitud[i] > maximo)
+					{
+			            maximo = dato[j].magnitud[i];
+			        }
+	   			}
+
+			}
+		}
+
+		if (nombreValido==0)
+		{
+			  printf("El nombre introducido no es valido. \nDebe escribirse la primera letra con mayuscula y si son dos palabras con un guion bajo\n");
+		}
+		printf("\n");
+	}while(nombreValido==0);
+
+    return maximo;
+}
