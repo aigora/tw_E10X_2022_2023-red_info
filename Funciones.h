@@ -37,3 +37,5 @@ void Escribe_Fichero(ENERGIA dato[], CADENAS cadenas[], FECHAS fechas[]);
 void E_Renovables();
 void E_NoRenovables();
 void E_Total();
+float calcularMaximo(ENERGIA dato[]);
+
