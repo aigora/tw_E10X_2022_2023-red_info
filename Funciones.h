@@ -14,6 +14,10 @@ typedef struct
 	char anno[20];
 }FECHAS;
 
+ENERGIA dato[17];
+CADENAS cadenas[5];
+FECHAS fechas[25];
+
 void MenuPrincipal();
 void EnergiasRenovables();
 void EnergiasNoRenovables();
@@ -30,3 +34,6 @@ void Hora();
 void Red_Info();
 void Lee_Fichero(ENERGIA dato[], CADENAS cadenas[], FECHAS fechas[]);
 void Escribe_Fichero(ENERGIA dato[], CADENAS cadenas[], FECHAS fechas[]);
+void E_Renovables();
+void E_NoRenovables();
+void E_Total();
