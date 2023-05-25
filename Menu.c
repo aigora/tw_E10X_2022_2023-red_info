@@ -6,9 +6,6 @@
 
 int main()
 { 
-    ENERGIA dato[17];
-	CADENAS cadenas[5];
-	FECHAS fechas[25];
 
     Lee_Fichero(dato, cadenas, fechas);
     Red_Info();
