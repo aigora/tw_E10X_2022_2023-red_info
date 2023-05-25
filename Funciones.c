@@ -57,10 +57,14 @@ void MenuPrincipal()
     }
 
 }
+
+//Funcion para consultar las diversas energias renovables del trabajo
 EnergiasRenovables()
 {
     int renovables;
-//Funcion para consultar las diversas energias renovables del trabajo
+    E_Renovables();
+    
+    printf("\n");
     printf("1. Energia hidraulica\n");
     printf("\n");
     printf("2. Hidroeolica\n");
@@ -139,10 +143,14 @@ EnergiasRenovables()
         MenuPrincipal();
     }
 }
+
+//Funcion para consultar las diversas energias no renovables del trabajo
 void EnergiasNoRenovables()
 {
-//Funcion para consultar las diversas energias no renovables del trabajo
     int norenovables;
+    E_NoRenovables();
+
+    printf("\n");
     printf("1. Turbinacion de bombeo\n");
     printf("\n");
     printf("2. Nuclear\n");
@@ -239,10 +247,15 @@ void EnergiasNoRenovables()
         MenuPrincipal();
 }
 }
+
+
+//Funcion para consultar el apartado de energia total
 //Energia total
 void EnergiaTotal()
 {
-//Funcion para consultar el apartado de energia total
+    E_Total();
+
+    printf("\n");	
     printf("1. Consultar una fecha\n");
     printf("\n");
     printf("2. Consultar todas las fechas\n");
@@ -492,6 +505,7 @@ void calculos1()
 
         case 5:
             system("cls");
+	    Escribe_Fichero(dato,cadenas,fechas);
 
         break;
 
@@ -556,6 +570,7 @@ void calculos2()
 
         case 5:
             system("cls");
+	    Escribe_Fichero(dato,cadenas,fechas);
 
         break;
 
@@ -620,6 +635,7 @@ void calculos3()
 
         case 5:
             system("cls");
+	    Escribe_Fichero(dato,cadenas,fechas);
 
         break;
 
@@ -947,4 +963,71 @@ void Escribe_Fichero(ENERGIA dato[], CADENAS cadenas[], FECHAS fechas[])
     }
 
 }
+
+//Función mostrar imagen de Energia Renovable
+void E_Renovables()
+{
+	int c;
+
+	FILE *E_R;
+	E_R = fopen("Energia_Renovable.txt", "r");
+
+	if (E_R == NULL)
+	  printf("\n Archivo no encontrado.");
+
+   	 while((c = getc(E_R)) != EOF)
+	{
+	 	if (c == '\n')
+	 	   printf("\n");
+	 	else if (c == '\0')
+	 	   printf('\0');
+	 	else
+	 	   putchar(c);
+	}
+}
+
+//Función mostrar imagen de Energia No Renovable
+void E_NoRenovables()
+{
+	int c;
+
+	FILE *E_NoR;
+	E_NoR = fopen("Energia_Norenovable.txt", "r");
+
+	if (E_NoR == NULL)
+	  printf("\n Archivo no encontrado.");
+
+   	 while((c = getc(E_NoR)) != EOF)
+	{
+	 	if (c == '\n')
+	 	   printf("\n");
+	 	else if (c == '\0')
+	 	   printf('\0');
+	 	else
+	 	   putchar(c);
+	}
+}
+
+//Función mostrar imagen de Energia Total
+void E_Total()
+{
+	int c;
+
+	FILE *E_Tot;
+	E_Tot = fopen("Energia_Total.txt", "r");
+
+	if (E_Tot == NULL)
+	  printf("\n Archivo no encontrado.");
+
+   	 while((c = getc(E_Tot)) != EOF)
+	{
+	 	if (c == '\n')
+	 	   printf("\n");
+	 	else if (c == '\0')
+	 	   printf('\0');
+	 	else
+	 	   putchar(c);
+	}
+}
+
 
