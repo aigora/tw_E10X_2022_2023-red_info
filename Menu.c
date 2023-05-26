@@ -12,13 +12,6 @@ int main()
     Red_Info();
     MenuPrincipal();
     
-    system("pause");
-
-    max = calcularMaximo(dato);
-    printf("El Maximo valor encontrado es: %f Gwh\n", max);
-
-    min=calcularMinimo(dato);
-    printf("El minimo valor encontrado es: %f Gwh\n",min); 
-  
+    system("pause");  
     return 0;
 }
