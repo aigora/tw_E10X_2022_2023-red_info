@@ -39,3 +39,5 @@ void E_NoRenovables();
 void E_Total();
 float calcularMaximo(ENERGIA dato[]);
 float calcularMinimo(ENERGIA dato[]);
+float Buscar_por_fecha(ENERGIA dato[], FECHAS fechas[], char Fecha_elegida[]);
+
