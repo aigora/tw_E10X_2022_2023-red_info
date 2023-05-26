@@ -1084,3 +1084,45 @@ float calcularMaximo(ENERGIA dato[])
 
     return maximo;
 }
+
+//Función Calculo del minimo valor que una energia ha producido.
+float calcularMinimo(ENERGIA dato[])
+{
+    float minimo;  // Inicializar con el primer número del vector
+    int i,j;
+    char nombre[60];
+    int nombreValido=0;
+
+    do
+    {
+	    printf("Dame el nombre de la energia a calcular el minimo\n");
+	    scanf("%s", nombre);
+	    printf("\n");
+
+	    for (j=0; j<17; j++)
+	    {
+	        if(strcmp(dato[j].energia, nombre)==0)
+	        {
+		        nombreValido = 1;
+			    minimo = dato[j].magnitud[0]; // Inicializar con el primer número del vector
+
+	            for (i=1; i<24; i++)
+				{
+			        if (dato[j].magnitud[i] < minimo)
+					{
+			            minimo = dato[j].magnitud[i];
+			        }
+	   			}
+
+			}
+		}
+
+		if (nombreValido==0)
+		{
+			  printf("El nombre introducido no es valido. \nDebe escribirse la primera letra con mayuscula y si son dos palabras con un guion bajo\n");
+		}
+		printf("\n");
+	}while(nombreValido==0);
+
+    return minimo;
+}
