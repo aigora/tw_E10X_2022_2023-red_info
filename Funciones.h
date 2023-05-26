@@ -38,4 +38,4 @@ void E_Renovables();
 void E_NoRenovables();
 void E_Total();
 float calcularMaximo(ENERGIA dato[]);
-
+float calcularMinimo(ENERGIA dato[]);
