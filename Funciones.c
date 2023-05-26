@@ -1308,3 +1308,51 @@ float Buscar_por_fecha(ENERGIA dato[], FECHAS fechas[], char Fecha_elegida[])
 
     return magnitud;
 }
+
+void Imprime_Magnitudes_Energia(ENERGIA dato[], FECHAS fechas[])
+{
+	int i, j;
+	char nombre_energia[60];
+	int nombreValido = 0;
+	int posicion;
+	
+	
+    do
+	{
+	    printf("Dame el nombre de la energ%ca para imprimir sus magnitudes: \n",161);
+	    scanf("%s", nombre_energia);
+	    printf("\n");
+
+	    for(i=0;i<17;i++)
+	    {
+	    	if (strcmp(dato[i].energia, nombre_energia) == 0) 
+	        {
+		    	nombreValido = 1;
+		     	break;
+		    }
+		    
+	    }
+    
+	    if(nombreValido==0)
+	    {
+	        printf("El nombre introducido no es valido. \nDebe escribirse la primera letra con mayuscula y si son dos palabras con un guion bajo\n");		  	
+		}
+
+
+	}while(nombreValido==0);
+	
+	
+	if(nombreValido==1)
+	{
+	 	
+	    printf("\t\t%s \n\n", nombre_energia);  
+	    printf("\tFechas  \t Magnitud (Gwh)\n\n");          
+	    for (j = 0; j < 24; j++) 
+		{
+	        printf("\t%s  \t %.5f\n", fechas[j].anno,dato[i].magnitud[j]);
+
+	    }
+	    printf("\n");
+	
+	}	
+}
