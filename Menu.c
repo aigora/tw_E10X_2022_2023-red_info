@@ -6,8 +6,8 @@
 
 int main()
 { 
-	float max, min;
-
+    float max, min;
+	
     Lee_Fichero(dato, cadenas, fechas);
     Red_Info();
     MenuPrincipal();
@@ -16,8 +16,9 @@ int main()
 
     max = calcularMaximo(dato);
     printf("El Maximo valor encontrado es: %f Gwh\n", max);
-    
-    
-    
+
+    min=calcularMinimo(dato);
+    printf("El minimo valor encontrado es: %f Gwh\n",min); 
+  
     return 0;
 }
