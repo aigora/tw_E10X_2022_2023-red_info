@@ -347,6 +347,7 @@ void analisis1()
         case 2:
             system("cls");
             printf("Imprimir todas la fechas\n");
+	    Imprime_Magnitudes_Energia(dato,fecha);
         break;
 
         case 3:
@@ -439,6 +440,7 @@ void analisis2()
         case 2:
             system("cls");
             printf("Imprimir todas la fechas\n");
+            Imprime_Magnitudes_Energia(dato,fecha);
         break;
 
         case 3:
@@ -519,6 +521,7 @@ void analisis3()
         case 2:
             system("cls");
             printf("Imprimir todas la fechas\n");
+            Imprime_Magnitudes_Energia(dato,fecha);
         break;
 
         case 3:
