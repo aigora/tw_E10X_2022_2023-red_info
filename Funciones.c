@@ -496,19 +496,20 @@ void calculos1()
         case 1:
             system("cls");
             max1=calcularMaximo(dato);
+ 	    printf("El Maximo valor encontrado es: %f Gwh\n", max1);
         break;
 
         case 2:
             system("cls");
             min1=calcularMinimo(dato);
-
+	    printf("El minimo valor encontrado es: %f Gwh\n",min1); 
         break;
 
         case 3:
             system("cls");
 
         break;
-
+		    
         case 4:
             system("cls");
 
@@ -563,14 +564,16 @@ void calculos2()
     while(operaciones != 1 && operaciones != 2 && operaciones != 3 && operaciones != 4 && operaciones != 5 && operaciones != 6 && operaciones != 0);
     switch(operaciones)
     {
-        case 1:
+         case 1:
             system("cls");
             max2=calcularMaximo(dato);
+ 	    printf("El Maximo valor encontrado es: %f Gwh\n", max2);
         break;
 
-        case 2:            
+        case 2:
             system("cls");
-	    min2=calcularMinimo(dato);
+            min2=calcularMinimo(dato);
+	    printf("El minimo valor encontrado es: %f Gwh\n",min2); 
         break;
 
         case 3:
@@ -632,14 +635,16 @@ void calculos3()
     while(operaciones != 1 && operaciones != 2 && operaciones != 3 && operaciones != 4 && operaciones != 5 && operaciones != 6 && operaciones != 0);
     switch(operaciones)
     {
-        case 1:
+         case 1:
             system("cls");
             max3=calcularMaximo(dato);
+ 	    printf("El Maximo valor encontrado es: %f Gwh\n", max3);
         break;
 
         case 2:
             system("cls");
-	    min3=calcularMinimo(dato);
+            min3=calcularMinimo(dato);
+	    printf("El minimo valor encontrado es: %f Gwh\n",min3); 
         break;
 
         case 3:
