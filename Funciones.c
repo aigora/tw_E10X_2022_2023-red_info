@@ -463,7 +463,7 @@ void analisis3()
 void calculos1()
 {
     int operaciones;
-    float max2, min2;
+    float max1, min1;
 
     printf("1. Maximo\n");
     printf("\n");
@@ -494,6 +494,7 @@ void calculos1()
 
         case 2:
             system("cls");
+            min1=calcularMinimo(dato);
 
         break;
 
@@ -561,9 +562,9 @@ void calculos2()
             max2=calcularMaximo(dato);
         break;
 
-        case 2:
+        case 2:            
             system("cls");
-
+	    min2=calcularMinimo(dato);
         break;
 
         case 3:
@@ -632,7 +633,7 @@ void calculos3()
 
         case 2:
             system("cls");
-
+	    min3=calcularMinimo(dato);
         break;
 
         case 3:
@@ -1043,7 +1044,8 @@ void E_Total()
 }
 
 
-//Función Calculo del maximo valor que una energia ha producido.
+//Función Calculo del 
+imo valor que una energia ha producido.
 float calcularMaximo(ENERGIA dato[])
 {
     float maximo;  // Inicializar con el primer número del vector
