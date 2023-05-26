@@ -1044,8 +1044,7 @@ void E_Total()
 }
 
 
-//Función Calculo del 
-imo valor que una energia ha producido.
+//Función Calculo del maximo valor que una energia ha producido.
 float calcularMaximo(ENERGIA dato[])
 {
     float maximo;  // Inicializar con el primer número del vector
