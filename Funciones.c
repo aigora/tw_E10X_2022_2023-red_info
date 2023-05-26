@@ -272,6 +272,7 @@ void analisis1()
 {
 //Funcion de consultas para las energias renovables
     int consulta, ano, mes;
+	char Fecha_elegida[8];
         printf("\n");
         printf("1. Consultar informacion de una fecha\n");
         printf("\n");
@@ -309,7 +310,8 @@ void analisis1()
         while(mes < 1 || mes > 12);
         printf("\n");
             system("cls");
-        printf("La fecha seleccionada es: %i / %i \n", mes, ano);
+        sprintf(Fecha_elegida, "%i-%i", mes, ano);
+        printf("La fecha seleccionada es: %s \n", Fecha_elegida);
         break;
 
         case 2:
@@ -341,6 +343,7 @@ void analisis2()
 {
 //Funcion de consultas para las energias no renovables
     int consulta, ano, mes;
+	char Fecha_eleigida[8];
         printf("\n");
         printf("1. Consultar informacion de una fecha\n");
         printf("\n");
@@ -378,7 +381,8 @@ void analisis2()
         while(mes < 1 || mes > 12);
         printf("\n");
             system("cls");
-        printf("La fecha seleccionada es: %i / %i \n", mes, ano);
+            sprintf(Fecha_elegida, "%i-%i", mes, ano);
+        printf("La fecha seleccionada es: %s \n", Fecha_elegida);
         break;
 
         case 2:
@@ -409,6 +413,7 @@ void analisis3()
 {
 //Funcion de consultas para la energia total
     int consulta, ano, mes;
+	char Fecha_elegida[8];
     do
     {
         printf("Elija una opcion valida\n");
@@ -435,7 +440,8 @@ void analisis3()
         while(mes < 1 || mes > 12);
         printf("\n");
             system("cls");
-        printf("La fecha seleccionada es: %i / %i \n", mes, ano);
+        sprintf(Fecha_elegida, "%i-%i", mes, ano);
+        printf("La fecha seleccionada es: %s \n", Fecha_elegida);
         break;
 
         case 2:
