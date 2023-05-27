@@ -307,12 +307,12 @@ void analisis1()
     {
         case 1:
             system("cls");
-            printf("Que fecha quiere consultar, seleccionando primero el anno y seguidamente el mes\n");
+            printf("Que fecha quiere consultar, seleccionando primero el a%co y seguidamente el mes\n", 164);
             printf("\n");
 
             do
             {
-                printf("Seleccione un anno valido (2021/2022)\n");
+                printf("Seleccione un a%co valido (2021/2022)\n", 164);
                 scanf("%i", &ano);
             }
             while(ano!=2021 && ano!=2022);
@@ -399,12 +399,12 @@ void analisis2()
     {
         case 1:
             system("cls");
-            printf("Que fecha quiere consultar, seleccionando primero el anno y seguidamente el mes\n");
+            printf("Que fecha quiere consultar, seleccionando primero el a%co y seguidamente el mes\n", 164);
             printf("\n");
 
             do
             {
-                printf("Seleccione un anno valido (2021/2022)\n");
+                printf("Seleccione un a%co valido (2021/2022)\n", 164);
                 scanf("%i", &ano);
             }
             while(ano!=2021 && ano!=2022);
@@ -479,12 +479,12 @@ void analisis3()
     {
         case 1:
             system("cls");
-            printf("Que fecha quiere consultar, seleccionando primero el anno y seguidamente el mes\n");
+            printf("Que fecha quiere consultar, seleccionando primero el a%co y seguidamente el mes\n", 164);
             printf("\n");
 
             do
             {
-                printf("Seleccione un anno valido (2021/2022)\n");
+                printf("Seleccione un a%co valido (2021/2022)\n", 164);
                 scanf("%i", &ano);
             }
             while(ano!=2021 && ano!=2022);
@@ -541,7 +541,7 @@ void analisis3()
 calculos1()
 {
     int operaciones;
-    float max1, min1;
+    float max1, min1, media;
     char opcion;
 
     printf("1. M%cximo\n",160);
@@ -598,7 +598,8 @@ calculos1()
 
         case 3:
             system("cls");
-
+            media = Media(dato);
+            printf("La media del a%co seleccionado es: %f Gwh\n", 164 , media);
         break;
 
         case 4:
@@ -630,7 +631,7 @@ calculos1()
 void calculos2()
 {
     int operaciones;
-    float max2, min2;
+    float max2, min2, media;
     char opcion;
 
     printf("1. M%cximo\n",160);
@@ -685,7 +686,8 @@ void calculos2()
 
         case 3:
             system("cls");
-
+            media = Media(dato);
+            printf("La media del a%co seleccionado es: %f Gwh\n", 164 ,media);
         break;
 
         case 4:
@@ -718,7 +720,7 @@ void calculos2()
 void calculos3()
 {
     int operaciones;
-    float max3, min3;
+    float max3, min3, media;
     char opcion;
 
     printf("1. M%cximo\n",160);
@@ -774,7 +776,8 @@ void calculos3()
 
         case 3:
             system("cls");
-
+            media = Media(dato);
+            printf("La media del a%co seleccionado es: %f Gwh\n", 164 ,media);
         break;
 
         case 4:
@@ -1356,3 +1359,125 @@ void Imprime_Magnitudes_Energia(ENERGIA dato[], FECHAS fechas[])
 	
 	}	
 }
+
+///FUNCION CALCULO DE LA MEDIA SEGUN EL AÑO QUE SE HAYA ESCOGIDO
+float Media (ENERGIA dato[])
+{
+
+	char nombre_energia[60], opcion;
+    int i, j, contador = 0, nombreValido=0;
+    float media, suma = 0.0;
+
+    printf("Seleccione el a%co en el que quiera realizar la media: 2021 , 2022 o Ambas\n",164);
+	printf("1. 2021\n");
+    printf("2. 2022\n");
+    printf("3. Ambas\n");
+    scanf("%s", &opcion);
+
+	switch (opcion)
+	{
+        case '1':
+            do
+        	{
+			    printf("Dame el nombre de la energ%ca para imprimir sus magnitudes: \n",161);
+			    scanf("%s", nombre_energia);
+			    printf("\n");
+
+			    for(i=0;i<17;i++)
+			    {
+			    	if (strcmp(dato[i].energia, nombre_energia) == 0)
+			        {
+				    	nombreValido = 1;
+			            for (j = 0; j < 12; j++)
+						{
+			                suma = suma + dato[i].magnitud[j];
+			                contador++;
+			            }
+						break;
+
+				    }
+			    }
+
+			    if(nombreValido==0)
+			    {
+			        printf("El nombre introducido no es valido. \nDebe escribirse la primera letra con mayuscula y si son dos palabras con un guion bajo\n");
+				}
+			}while(nombreValido==0);
+
+			media = (float)suma / contador;
+   			return media;
+
+            break;
+
+        case '2':
+            do
+        	{
+			    printf("Dame el nombre de la energ%ca para imprimir sus magnitudes: \n",161);
+			    scanf("%s", nombre_energia);
+			    printf("\n");
+
+			    for(i=0;i<17;i++)
+			    {
+			    	if (strcmp(dato[i].energia, nombre_energia) == 0)
+			        {
+				    	nombreValido = 1;
+			            for (j = 12; j < 24; j++)
+						{
+			                suma = suma + dato[i].magnitud[j];
+			                contador++;
+			            }
+			            break;
+
+				    }
+			    }
+
+			    if(nombreValido==0)
+			    {
+			        printf("El nombre introducido no es valido. \nDebe escribirse la primera letra con mayuscula y si son dos palabras con un guion bajo\n");
+				}
+			}while(nombreValido==0);
+
+			media = (float)suma / contador;
+   			return media;
+
+            break;
+
+        case '3':
+            do
+        	{
+			    printf("Dame el nombre de la energ%ca para imprimir sus magnitudes: \n",161);
+			    scanf("%s", nombre_energia);
+			    printf("\n");
+
+			    for(i=0;i<17;i++)
+			    {
+			    	if (strcmp(dato[i].energia, nombre_energia) == 0)
+			        {
+				    	nombreValido = 1;
+			            for (j = 0; j < 24; j++)
+						{
+			                suma = suma + dato[i].magnitud[j];
+			                contador++;
+			            }
+			            break;
+
+				    }
+			    }
+
+			    if(nombreValido==0)
+			    {
+			        printf("El nombre introducido no es valido. \nDebe escribirse la primera letra con mayuscula y si son dos palabras con un guion bajo\n");
+				}
+			}while(nombreValido==0);
+
+			media = (float)suma / contador;
+   			return media;
+
+			break;
+
+        default:
+            printf("Opci%cn inv%clida. Intente nuevamente.\n",162,160);
+            return 0.0;  // Sale de la función en caso de opción inválida
+    }
+}
+
