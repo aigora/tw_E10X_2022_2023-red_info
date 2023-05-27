@@ -42,4 +42,6 @@ float calcularMinimo(ENERGIA dato[]);
 float Buscar_por_fecha(ENERGIA dato[], FECHAS fechas[], char Fecha_elegida[]);
 void Imprime_Magnitudes_Energia(ENERGIA dato[], FECHAS fechas[]);
 float Media (ENERGIA dato[]);
+void Ordenacion (ENERGIA dato[], FECHAS fechas[]);
+void Guardar_Datos_en_Fichero(ENERGIA dato[], FECHAS fechas[],char nombre[], int anno);
 
