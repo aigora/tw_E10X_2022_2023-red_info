@@ -362,6 +362,7 @@ void analisis1(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit (-1);
                 }
             break;
 
@@ -380,6 +381,7 @@ void analisis1(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit (-1);
                 }
             break;
 
@@ -474,6 +476,7 @@ void analisis2(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit (-1);
                 }
             break;
 
@@ -492,6 +495,7 @@ void analisis2(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit (-1);
                 }
 
             break;
@@ -515,6 +519,7 @@ void analisis2(char Nombre[])
 
             default:
             printf("Opci%cn inv%clida. Intente nuevamente.\n\n",162,160);
+
         }
     }while(consulta < '0' || consulta > '4');
 }
@@ -575,6 +580,7 @@ void analisis3(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -593,6 +599,7 @@ void analisis3(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -617,7 +624,7 @@ void analisis3(char Nombre[])
 
 ///ENERGIA  RENOVABLE
 ///FUNCION CALCULOS DE ENERGIA  RENOVABLEvoid
-calculos1(char Nombre[])
+void calculos1(char Nombre[])
 {
     float max1, min1, media;
     char operaciones ,opcion;
@@ -659,6 +666,7 @@ calculos1(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -677,6 +685,7 @@ calculos1(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -690,11 +699,12 @@ calculos1(char Nombre[])
                 if(opcion=='S' || opcion=='s')
                 {
                     system("cls");
-                    calculos3(Nombre);
+                    calculos1(Nombre);
                 }
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -707,11 +717,12 @@ calculos1(char Nombre[])
                 if(opcion=='S' || opcion=='s')
                 {
                     system("cls");
-                    calculos3(Nombre);
+                    calculos1(Nombre);
                 }
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -740,7 +751,6 @@ calculos1(char Nombre[])
 ///ENERGIA NO RENOVABLE
 ///FUNCION CALCULOS DE ENERGIA NO RENOVABLE
 void calculos2(char Nombre[])
-
 {
     float max2, min2, media;
     char operaciones, opcion;
@@ -781,6 +791,7 @@ void calculos2(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -799,6 +810,7 @@ void calculos2(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -812,11 +824,12 @@ void calculos2(char Nombre[])
                 if(opcion=='S' || opcion=='s')
                 {
                     system("cls");
-                    calculos3(Nombre);
+                    calculos2(Nombre);
                 }
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -829,11 +842,12 @@ void calculos2(char Nombre[])
                 if(opcion=='S' || opcion=='s')
                 {
                     system("cls");
-                    calculos3(Nombre);
+                    calculos2(Nombre);
                 }
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -903,6 +917,7 @@ void calculos3(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
 
             break;
@@ -922,6 +937,7 @@ void calculos3(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -940,6 +956,7 @@ void calculos3(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
@@ -957,6 +974,7 @@ void calculos3(char Nombre[])
                 else
                 {
                     printf("\nFIN DEL PROGRAMA....\n");
+                    exit(-1);
                 }
             break;
 
